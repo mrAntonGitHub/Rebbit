@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/homeFragment.appBar"
+        android:layout_width="match_parent"
+        android:elevation="0dp"
+        android:translationZ="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_scrollFlags="scroll">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/homeFragment.toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            android:textAlignment="center"
+            app:title="@string/app_name" />
+
+        <com.google.android.material.tabs.TabLayout
+            app:tabInlineLabel="true"
+            android:paddingBottom="10dp"
+            app:tabGravity="center"
+            app:tabIndicatorFullWidth="false"
+            app:tabSelectedTextColor="@color/main.primaryColor"
+            app:tabIndicatorColor="@color/main.primaryColor"
+            android:id="@+id/homeFragment.tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+            android:textAllCaps="false" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/homeFragment.viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    </androidx.viewpager.widget.ViewPager>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/homeFragment.addNewStory"
+        android:backgroundTint="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_white"
+        app:borderWidth="0dp"
+        app:fabSize="normal"
+        android:elevation="2dp"
+        android:layout_margin="20dp"
+        android:layout_gravity="end|bottom"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

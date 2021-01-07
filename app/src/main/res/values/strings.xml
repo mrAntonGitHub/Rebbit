@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Rebbit</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+
+    <string name="hello_world">Hello Square World!</string>
+    <string name="preview_text">Основные правила нашего сообщества:\n1.\n2.\n3.\n4.</string>
+    <string name="can_contain">Может содержать нецензурные выражения</string>
+    <string name="age_protect">16+</string>
+    <string name="next">Далее</string>
+
+    <!-- Bottom Navigation Bar -->
+    <string name="bottom_bar.title_main">Главная</string>
+    <string name="bottom_bar.title_books">Избранное</string>
+    <string name="bottom_bar.title_notifications">Уведомления</string>
+    <string name="bottom_bar.title_profile">Профиль</string>
+    <string name="hello">Добро пожаловать</string>
+    <string name="settings">Настройки</string>
+    <string name="nightTheme">Ночной режим</string>
+    <string name="offerToRegister.text">Зарегестрируйтесь или войдите в аккаунт, чтобы использовать все возможности сообщества!</string>
+    <string name="registration">Регистрация</string>
+    <string name="signIn">Войти</string>
+    <string name="skip">Пропустить</string>
+    <string name="email">Электронная почта</string>
+    <string name="password">Пароль</string>
+    <string name="registration.forgotPassword">Забыли пароль?</string>
+    <string name="registration.orUsing">или через</string>
+    <string name="registration.signUp">Зарегестрироваться</string>
+    <string name="signIn.enter">Войти</string>
+    <string name="allStories.noStories">Пока историй нет, но очень скоро они появятся!</string>
+    <string name="allStories.enterToUpdate">Появились новые истории. Потяните для обновления</string>
+    <string name="name">Имя</string>
+    <string name="surname">Фамилия</string>
+    <string name="patronymic">Отчество</string>
+    <string name="phone_number">Номер телефона</string>
+    <string name="status">Статус</string>
+    <string name="toBookmarks">В закладки</string>
+    <string name="published">Опубликованные</string>
+    <string name="unpublished">Не опубликованные</string>
+    <string name="myStories">Мои истории</string>
+    <string name="all_stories">Все истории</string>
+    <string name="onModeration">На модерации</string>
+    <string name="expand">Развернуть</string>
+
+    <plurals name="time">
+        <item quantity="one">Займет ~ %d минуту</item>
+        <item quantity="few">Займет ~ %d минуты</item>
+        <item quantity="other">Займет ~ %d минут</item>
+    </plurals>
+
+    <!-- Violation tags -->
+    <string-array name="violation">
+        <item>Оскорбление</item>
+        <item>Пропоганда психоактивных веществ</item>
+        <item>Пропоганда психических растройств</item>
+        <item>Насилие</item>
+        <item>Призыв к травле</item>
+        <item>Жестокое обращение с животными</item>
+        <item>Введение в заблуждение</item>
+        <item>Экстримизм</item>
+        <item>Другое</item>
+    </string-array>
+
+
+</resources>

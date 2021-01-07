@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F88E0</color>
+    <color name="colorPrimaryDark">#76A3D2</color>
+    <color name="colorAccent">#3F88E0</color>
+    <color name="colorGrey">#b8b8bb</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBackground">#F2F3F5</color>
+
+    <color name="main.primaryColor">#93B2FE</color>
+<!--    <color name="main.globalBackgroundColor">#F7F6F4</color>-->
+
+    <color name="main.lightGreen">#E3E5FF</color>
+    <color name="main.darkGreen">#F1C2CA</color>
+    <color name="main.link">#4286F5</color>
+    <color name="acceptColor">#4caf50</color>
+
+
+    <color name="cancel">#f44336</color>
+
+    <color name="main.cardViewLightBackground">#F7F6F4</color>
+
+    <color name="welcomeScreenBackgroundColor">@color/main.primaryColor</color>
+
+    <color name="bottomNavigationBar.icon">@color/main.primaryColor</color>
+
+
+    <color name="offerToRegister.darkGreen">@color/main.darkGreen</color>
+    <color name="offerToRegister.lightGreen">@color/main.lightGreen</color>
+    <color name="offerToRegister.textColor">#848381</color>
+
+    <color name="gray">#ECEDF1</color>
+
+    <color name="post.itemsColor">#B8C1CC</color>
+
+
+    <color name="registration.lightGreen">@color/main.lightGreen</color>
+    <color name="registration.darkGreen">@color/main.darkGreen</color>
+
+    <color name="orange">#FF8F00</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+</resources>

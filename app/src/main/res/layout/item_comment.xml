@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="1dp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/comments.userIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_person_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/comments.moreButton"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_more"
+        android:backgroundTint="#B8C1CC"
+        android:padding="10dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/comments.author"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/comments.moreButton"
+        app:layout_constraintStart_toEndOf="@id/comments.userIcon"
+        app:layout_constraintTop_toTopOf="@id/comments.userIcon"
+        tools:text="User12132" />
+
+    <TextView
+        android:id="@+id/comments.body"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toStartOf="@+id/comments.moreButton"
+        app:layout_constraintStart_toEndOf="@id/comments.userIcon"
+        app:layout_constraintTop_toBottomOf="@id/comments.author"
+        tools:text="Таким образом, курс на социально-ориентированный национальный проект играет важную роль в формировании новых предложений. Значимость этих проблем настолько очевидна, что сложившаяся структура организации напрямую зависит от экономической целесообразности принимаемых решений. Практический опыт показывает, что консультация с профессионалами из IT создаёт предпосылки качественно новых шагов для всесторонне сбалансированных нововведений! Задача организации, в особенности же повышение уровня гражданского сознания требует от нас анализа существующих финансовых и административных условий? Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности способствует повышению актуальности дальнейших направлений развития проекта. С другой стороны курс на социально-ориентированный национальный проект в значительной степени обуславливает создание системы масштабного изменения ряда параметров. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач?" />
+
+    <TextView
+        android:id="@+id/comments.publishedTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="вчера в 18:21"
+        app:layout_constraintStart_toStartOf="@id/comments.body"
+        app:layout_constraintTop_toBottomOf="@id/comments.body" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

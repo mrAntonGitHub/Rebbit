@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.larin_anton.rebbit">
+
+    <application
+        android:name=".Application"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Rebbit">
+        <activity
+            android:name="com.larin_anton.rebbit.ui.welcome.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.larin_anton.rebbit.ui.registration.AttemptToRegister"
+            android:theme="@style/Theme.Rebbit.LightActionBar"/>
+        <activity
+            android:name="com.larin_anton.rebbit.ui.registration.SignInActivity"
+            android:label="@string/signIn.enter"
+            android:parentActivityName="com.larin_anton.rebbit.ui.registration.AttemptToRegister" />
+        <activity
+            android:name="com.larin_anton.rebbit.ui.registration.SignUpActivity"
+            android:label="@string/registration"
+            android:parentActivityName="com.larin_anton.rebbit.ui.registration.AttemptToRegister" />
+        <activity
+            android:name="com.larin_anton.rebbit.MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.larin_anton.rebbit.ui.home.storyBuilder.StoryBuilderActivity"
+            android:parentActivityName="com.larin_anton.rebbit.MainActivity" />
+        <activity
+            android:name="com.larin_anton.rebbit.ui.comments.CommentsActivity"
+            android:parentActivityName="com.larin_anton.rebbit.MainActivity"
+            android:label="Комментарии"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.notifications.NotificationsFragment">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/notification.noStoriesAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/notification.bottomFirstPreviewTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="no_notification.json"
+        app:lottie_loop="true" />
+
+    <TextView
+        android:id="@+id/notification.bottomFirstPreviewTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Здесь будут появляться Ваши уведомления"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/notification.bottomSecondPreviewTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notification.noStoriesAnimation" />
+
+    <TextView
+        android:id="@+id/notification.bottomSecondPreviewTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="Пока уведомлений нет"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notification.bottomFirstPreviewTextView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notification.recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:outlineAmbientShadowColor="@android:color/transparent"
+        tools:listitem="@layout/item_notification" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

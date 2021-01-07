@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/comments.refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/comments.commentsTitle">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/comments.nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:context=".ui.comments.CommentsActivity">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/comments.postCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginBottom="4dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:id="@+id/comments.bodyTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textIsSelectable="true"
+                        tools:text="Таким образом, начало повседневной работы по формированию позиции требует от нас системного анализа ключевых компонентов планируемого обновления. Практический опыт показывает, что постоянное информационно-техническое обеспечение нашей деятельности напрямую зависит от экономической целесообразности принимаемых решений.\nДорогие друзья, повышение уровня гражданского сознания представляет собой интересный эксперимент проверки всесторонне сбалансированных нововведений. Таким образом, сложившаяся структура организации играет важную роль в формировании соответствующих условий активизации.\nЗначимость этих проблем настолько очевидна, что консультация с профессионалами из IT требует от нас анализа форм воздействия! Таким образом, выбранный нами инновационный путь способствует повышению актуальности экономической целесообразности принимаемых решений.\nПовседневная практика показывает, что рамки и место обучения кадров играет важную роль в формировании системы масштабного изменения ряда параметров. Значимость этих проблем настолько очевидна, что курс на социально-ориентированный национальный проект требует от нас анализа всесторонне сбалансированных нововведений.\nРавным образом постоянный количественный рост и сфера нашей активности позволяет оценить значение существующих финансовых и административных условий."
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/comments.publishedTimeTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        tools:text="08.04 15:40"
+                        android:textColor="@color/post.itemsColor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/comments.bodyTextView" />
+
+                    <TextView
+                        android:id="@+id/comments.author"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="6dp"
+                        tools:text="user12938458498"
+                        android:textColor="@color/main.primaryColor"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/comments.bodyTextView" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/comments.tagsRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/comments.author" />
+
+                    <Button
+                        android:id="@+id/comments.like"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:drawableStart="@drawable/image_like_set"
+                        android:stateListAnimator="@animator/animation_scale"
+                        tools:text="28"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/comments.tagsRecyclerView" />
+
+                    <ImageButton
+                        android:id="@+id/comments.toBookmarks"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/toBookmarks"
+                        android:src="@drawable/ic_bookmarks"
+                        android:tint="@color/main.primaryColor"
+                        app:layout_constraintBottom_toBottomOf="@id/comments.like"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/comments.like" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/comments.divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/post.itemsColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/comments.postCard" />
+
+                <TextView
+                    android:id="@+id/comments.commentsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Комментарии"
+                    app:layout_constraintStart_toStartOf="@id/comments.divider"
+                    app:layout_constraintTop_toBottomOf="@id/comments.divider" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/comments.commentsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="40dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/comments.commentsTitle"
+                    tools:listitem="@layout/item_comment" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:translationZ="10dp"
+            android:elevation="15dp"
+            android:background="@android:color/white"
+            android:layout_gravity="bottom">
+
+            <ImageButton
+                android:id="@+id/comments.sendCommentButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:padding="10dp"
+                android:src="@drawable/ic_send"
+                android:tint="@color/gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/comments.comment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:paddingStart="15dp"
+                android:hint="Комментарий"
+                android:maxHeight="150dp"
+                android:textSize="14sp"
+                app:layout_constraintTop_toTopOf="@id/comments.sendCommentButton"
+                app:layout_constraintBottom_toBottomOf="@id/comments.sendCommentButton"
+                app:layout_constraintEnd_toStartOf="@id/comments.sendCommentButton"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="RtlSymmetry" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/comments.progressBar"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

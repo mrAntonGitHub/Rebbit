@@ -1,0 +1,328 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/viewpager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="100dp">
+
+        <include
+            android:id="@+id/profile.header"
+            layout="@layout/item_profile_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profile.cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintBottom_toBottomOf="@id/profile.header"
+            app:layout_constraintTop_toBottomOf="@id/profile.header">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/profile.rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Рейтинг"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintEnd_toStartOf="@+id/profile.countOfPosts"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    app:layout_constraintEnd_toEndOf="@id/profile.rating"
+                    app:layout_constraintStart_toStartOf="@id/profile.rating"
+                    app:layout_constraintTop_toBottomOf="@id/profile.rating" />
+
+                <TextView
+                    android:id="@+id/profile.countOfPosts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Количество постов"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/profile.rating"
+                    app:layout_constraintTop_toTopOf="@id/profile.rating" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    app:layout_constraintEnd_toEndOf="@id/profile.countOfPosts"
+                    app:layout_constraintStart_toStartOf="@id/profile.countOfPosts"
+                    app:layout_constraintTop_toBottomOf="@id/profile.countOfPosts" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/profile.accountInfoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Информация об аккаунте"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile.cardView" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/profile.userNameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:autofillHints="@string/name"
+            android:hint="@string/name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile.accountInfoTitle">
+
+            <EditText
+                android:id="@+id/profile.userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:background="@null"
+                android:drawableLeft="@drawable/ic_person"
+                android:drawablePadding="16dp"
+                android:enabled="false"
+                android:inputType="textCapSentences"
+                android:padding="6dp"
+                android:text="Аноним"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/profile.userSurnameLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:autofillHints="@string/surname"
+            android:hint="@string/surname"
+            app:layout_constraintEnd_toEndOf="@id/profile.userNameLayout"
+            app:layout_constraintStart_toStartOf="@id/profile.userNameLayout"
+            app:layout_constraintTop_toBottomOf="@id/profile.userNameLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/profile.userSurname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:background="@null"
+                android:enabled="false"
+                android:inputType="textCapSentences"
+                android:padding="6dp"
+                android:paddingStart="45dp"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/profile.userPatronymicLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:autofillHints="@string/patronymic"
+            android:hint="@string/patronymic"
+            app:layout_constraintEnd_toEndOf="@id/profile.userSurnameLayout"
+            app:layout_constraintStart_toStartOf="@id/profile.userSurnameLayout"
+            app:layout_constraintTop_toBottomOf="@id/profile.userSurnameLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/profile.userPatronymic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:background="@null"
+                android:enabled="true"
+                android:inputType="textCapSentences"
+                android:padding="6dp"
+                android:paddingStart="45dp"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/profile.userEmailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:autofillHints="@string/email"
+            android:hint="@string/email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile.userPatronymicLayout">
+
+            <EditText
+                android:id="@+id/profile.userEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:background="@null"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="16dp"
+                android:enabled="true"
+                android:inputType="textEmailAddress"
+                android:padding="6dp"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/profile.userPhoneNumberLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:autofillHints="@string/phone_number"
+            android:hint="@string/phone_number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile.userEmailLayout">
+
+            <EditText
+                android:id="@+id/profile.userPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:background="@null"
+                android:drawableStart="@drawable/ic_phone"
+                android:drawablePadding="16dp"
+                android:enabled="false"
+                android:inputType="phone"
+                android:padding="6dp"
+                android:text="+8-800-555-35-35"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/profile.userStatusLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:autofillHints="@string/status"
+            android:hint="@string/status"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile.userPhoneNumberLayout">
+
+            <EditText
+                android:id="@+id/profile.userStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:background="@null"
+                android:drawableStart="@drawable/ic_user_status"
+                android:drawablePadding="16dp"
+                android:enabled="false"
+                android:inputType="text"
+                android:padding="6dp"
+                android:text="Обычный пользователь"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/profile.settingsInfoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/settings"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile.userStatusLayout" />
+
+        <Button
+            android:id="@+id/profile.defenceSettings"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:drawablePadding="16dp"
+            android:padding="6dp"
+            android:text="Безопасность"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            app:drawableEndCompat="@drawable/ic_next"
+            app:drawableStartCompat="@drawable/ic_security"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile.settingsInfoTitle" />
+
+        <Button
+            android:id="@+id/profile.themeSettings"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:drawablePadding="16dp"
+            android:padding="6dp"
+            android:text="Персонализация"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            app:drawableEndCompat="@drawable/ic_next"
+            app:drawableStartCompat="@drawable/ic_theme_settings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile.defenceSettings" />
+
+        <Button
+            android:id="@+id/profile.signOut"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:drawablePadding="16dp"
+            android:padding="6dp"
+            android:text="Выйти из аккаунта"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            app:drawableEndCompat="@drawable/ic_next"
+            app:drawableStartCompat="@drawable/ic_exit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile.themeSettings" />
+
+        <ProgressBar
+            android:id="@+id/profile.loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

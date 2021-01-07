@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu.myStories.onModerationPosts"
+        android:title="@string/onModeration"/>
+
+    <item
+        android:id="@+id/menu.myStories.privatePosts"
+        android:title="@string/unpublished" />
+
+    <item
+        android:id="@+id/menu.myStories.publishedPosts"
+        android:title="@string/published" />
+
+    <item
+        android:id="@+id/menu.myStories.allStories"
+        android:title="@string/all_stories" />
+
+</menu>

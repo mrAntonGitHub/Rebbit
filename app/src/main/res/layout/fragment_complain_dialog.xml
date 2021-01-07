@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/complain.info_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Считаете этот пост неприемлемым? Укажите, что Вам не понравилось и наши модераторы обязательно проверят его."
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        app:layout_constraintTop_toBottomOf="@id/complain.info_tv"
+        android:layout_marginTop="5dp"
+        android:background="@color/cardview_shadow_start_color"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <TextView
+        android:id="@+id/complain.violation_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Тема:"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/complain.info_tv" />
+
+    <Spinner
+        android:id="@+id/complain.violation_sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/complain.violation_tv"
+        app:layout_constraintStart_toEndOf="@id/complain.violation_tv"
+        app:layout_constraintTop_toTopOf="@id/complain.violation_tv" />
+
+    <EditText
+        android:id="@+id/complain.violation_description"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@null"
+        android:gravity="start"
+        android:hint="Постарайтесь кратко изложить суть нарушения..."
+        android:inputType="textMultiLine"
+        android:layout_marginTop="8dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/complain.violation_tv" />
+
+
+    <Button
+        android:id="@+id/complain.violation_cancel_btn"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/cancel"
+        android:text="Отмена"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/complain.violation_send_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/complain.violation_description" />
+
+    <Button
+        android:id="@+id/complain.violation_send_btn"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/colorAccent"
+        android:drawableEnd="@drawable/ic_send"
+        android:drawableTint="@android:color/white"
+        android:text="Отправить"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/complain.violation_cancel_btn"
+        app:layout_constraintTop_toBottomOf="@id/complain.violation_description" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

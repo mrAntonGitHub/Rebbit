@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <item
+            android:id="@+id/addStory.menu.saveLocally"
+            android:orderInCategory="101"
+            android:title="Сохранить на устройстве" />
+
+        <item
+            android:id="@+id/addStory.menu.share"
+            android:orderInCategory="102"
+            android:title="Опубликовать" />
+    </menu>
+

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="4dp">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_marginTop="4dp"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/itemNotification.userIconLayout"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/itemNotification.userIcon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_person_1" />
+
+        <ImageView
+            android:id="@+id/itemNotification.typeIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="bottom|end"
+            android:background="@drawable/item_circle_background"
+            android:elevation="2dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_like_filled" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/itemNotification.body"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toTopOf="@id/itemNotification.likedTime"
+        app:layout_constraintEnd_toStartOf="@+id/itemNotification.remove"
+        app:layout_constraintStart_toEndOf="@id/itemNotification.userIconLayout"
+        app:layout_constraintTop_toTopOf="@id/itemNotification.userIconLayout"
+        tools:text="User12132 оценил Вашу запись: Заголasdasdовок истории илиsdfsdfsfsdssdfsdfsfdsf sdfsdfsdfsdf sdfsdfsdsfdsfsd sdfsdfsdfs sdfsdfsdfsfd sdfsdfsdfsf, если нет заголовка - то начало истории" />
+
+    <TextView
+        android:id="@+id/itemNotification.likedTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18:21"
+        app:layout_constraintBottom_toBottomOf="@id/itemNotification.userIconLayout"
+        app:layout_constraintStart_toStartOf="@id/itemNotification.body"
+        app:layout_constraintTop_toBottomOf="@id/itemNotification.body" />
+
+    <ImageView
+        android:id="@+id/itemNotification.remove"
+        android:layout_margin="10dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_close"
+        android:background="@drawable/item_circle_background"
+        android:elevation="2dp"
+        android:padding="4dp"
+        android:backgroundTint="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@android:color/darker_gray" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

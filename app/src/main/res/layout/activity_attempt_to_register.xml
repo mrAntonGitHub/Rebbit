@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:id="@+id/offerToRegister.closeImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/colorGrey" />
+
+
+    <ImageView
+        android:id="@+id/offerToRegister.image"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/ic_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/offerToRegister.text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/offerToRegister.text"
+        android:textAlignment="center"
+        android:textColor="@color/colorGrey"
+        app:layout_constraintBottom_toTopOf="@+id/offerToRegister.registerButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/offerToRegister.image" />
+
+    <Button
+        android:id="@+id/offerToRegister.registerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/item_button_background_rounded"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/registration"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@id/offerToRegister.signInButton" />
+
+    <Button
+        android:id="@+id/offerToRegister.signInButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/item_button_background_rounded"
+        android:backgroundTint="@color/colorWhite"
+        android:text="@string/signIn"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/offerToRegister.skipButton"
+        android:layout_width="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="@string/skip"
+        android:textAllCaps="false"
+        android:textColor="@color/colorGrey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/offerToRegister.signInButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
